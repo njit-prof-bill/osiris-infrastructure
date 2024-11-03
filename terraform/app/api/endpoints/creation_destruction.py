@@ -18,4 +18,3 @@ def destroyTerraform(config_path: str, var_file: str = None):
         return {"success": result}
     except Exception as e:
         raise HTTPException(status_code=500)
-

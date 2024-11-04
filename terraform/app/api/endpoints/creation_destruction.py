@@ -17,11 +17,8 @@ def planTerraform(config_path: str, var_file: str = None) -> str:
     try:
         res=True
         return {"success": res}
-
     except Exception as e:
         raise HTTPException(status_code=500)
-
-
 
 @router.post("/apply_terraform")
 def applyTerraform(config_path: str, var_file: str = None):

@@ -2,8 +2,8 @@
 from fastapi import APIRouter, HTTPException
 router = APIRouter()
 
-@router.post("/get_terraform_output")
-def getTerraformOutput(config_path: str) -> bool:
+@router.post("/refresh_terraform_state")
+def refreshTerraformState(config_path: str) -> bool:
     try:
         result = True
         return {"success": result}

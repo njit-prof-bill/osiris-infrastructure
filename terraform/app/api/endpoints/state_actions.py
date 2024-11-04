@@ -17,3 +17,13 @@ def getTerraformOutput(config_path: str) -> bool:
         return {"success": result}
     except Exception as e:
         raise HTTPException(status_code=500)
+
+
+@router.post("/unlock_terraform_state")
+def unlockTerraformState(config_path: str) -> bool:
+    try:
+        result = True
+        return {"success": result}
+    except Exception as e:
+        raise HTTPException(status_code=500)
+

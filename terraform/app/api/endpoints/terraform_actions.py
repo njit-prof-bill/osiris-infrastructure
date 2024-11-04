@@ -2,8 +2,8 @@
 from fastapi import APIRouter, HTTPException
 router = APIRouter()
 
-@router.post("/validate_terraform")
-def validateTerraform(config_path: str) -> bool:
+@router.post("/lock_terraform_state")
+def lockTerraformState(config_path: str) -> bool:
     try:
         result = True
         return {"success": result}
